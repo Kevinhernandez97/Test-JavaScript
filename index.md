@@ -267,8 +267,19 @@ while (pregunta != 4) {
 _¿Qué es un array?_
 Es un grupo de elementos asignados a una variable, estos van dentro del simbolo [] y se separan por medio de una ,
 
+```js
+const array = [1, 'hola', true, false];
+```
+
 _¿Qué es un objeto?_
-Es un contenedor de datos, los cuales contienen atributos y metodos
+Es un contenedor de datos, pero cada elemento tiene un nombre clave.
+
+```js
+const obj = {
+  nombre: 'Alison',
+  edad: 3
+}
+```
 
 _¿Cuándo es mejor usar objetos o arrays?_
 Ocupamos arrays cuando queremos una lista especifica de datos, en cambio cuando tenemos elementos muy grandes y con distintos valores utilizamos objetos
@@ -303,16 +314,16 @@ miArray2(["LUNES", "MARTES", "MIERCOLES"]);
 4.  Crea una función que pueda recibir cualquier objeto como parámetro e imprima todos sus elementos uno por uno (no se vale imprimir el objeto completo)
 
 ```js
-let auto = {
+const auto = {
   marca : 'Ford',
   modelo : 'Fusion',
   annio : 2011
 }
 
-function miAuto (object) {
-  for(let key in object) {
-  console.log(object[key])
- }
+function miAuto (auto) {
+  const arr = Object.values(auto)
+  for (let i=0; i< arr.length; i++)
+  console.log(arr[i])
 }
 
 miAuto(auto)
