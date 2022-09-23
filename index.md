@@ -183,25 +183,21 @@ if (tipoDeSuscripcion === "free") {
 3. Replica el comportamiento de tu condicional anterior con if, else y else if, pero ahora solo con if (sin else ni else if).
 
 ```js
-let typeSuscription = ["free", "basic", "expert", "expertPlus"];
-let infoSuscription = [
-  "Solo puedes tomar los cursos gratis",
-  "Puedes tomar casi todos los cursos de platzi durante un mes",
-  "Puedes tomar casi todos los cursos de platzi durante un año",
-  "Tu y alguien mas pueden tomar todos los cursos de platzi durante un año",
-];
-let userSuscription = "basic";
+const typeSuscription = {
+  free: 'Solo puedes tomar los cursos gratis', 
+  basic: 'Puedes tomar casi todos los cursos de platzi durante un mes', 
+  expert: 'Puedes tomar casi todos los cursos de platzi durante un año',
+  expertPlus: 'Tu y alguien mas pueden tomar todos los cursos de platzi durante un año'
+};
 
-for (let i = 0; i < typeSuscription.length; i++) {
-  if (userSuscription == typeSuscription[i]) {
-    console.log(`${infoSuscription[i]}`);
+function conseguirTiposDeSuscripcion(suscripcion) {
+  if (typeSuscription[suscripcion]) {
+    console.log(typeSuscription[suscripcion])
+    return;
   }
-}
-if (tipoDeSuscripcion === "free") {
-  console;
+    console.warn('Ese tipo de suscripcion no existe')
 }
 ```
-
 
 **CICLOS**
 
